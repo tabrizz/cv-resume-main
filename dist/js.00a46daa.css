@@ -9,26 +9,41 @@ html {
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Raleway", sans-serif;
   line-height: 1.5;
   background: #f2f2f2;
   color: #323232;
+  font-size: 0.9rem;
 }
 
 .container {
   max-width: 960px;
   margin: 40px auto;
-  padding: 3.2rem;
+  padding: 5rem 3.5rem 3.5rem 7rem;
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .icon {
-  fill: currentColor;
+  fill: #323232;
   display: inline-block;
   font-size: inherit;
-  height: 1em;
+  height: 1.7em;
   overflow: visible;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.icon-box {
+  position: relative;
+  width: 1.7rem;
+  margin-right: 0.8rem;
+}
+.icon-box::after {
+  content: "";
+  border-bottom: 1.5px solid #323232;
+  position: absolute;
+  width: 100%;
 }
 
 .avatar {
@@ -39,20 +54,175 @@ body {
   display: flex;
   flex-direction: column;
   padding: 20px 0;
+  margin-bottom: 1.9rem;
 }
 .main-profile-detail {
   display: grid;
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: 2.5fr 4fr;
 }
 
 .my-name {
-  font-size: 50px;
-  overflow: visible;
+  font-size: 70px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+.my-name::before {
+  content: "";
+  height: 210px;
+  width: 210px;
+  border-radius: 300px;
+  background-color: #eed217;
+  position: absolute;
+  top: -41px;
+  left: -45px;
+  z-index: -1;
+}
+
+.my-title {
+  font-size: 2rem;
+  z-index: 1;
 }
 
 .links {
   display: flex;
   justify-content: space-between;
+  margin-top: 1.6rem;
+  border-top: 1px solid #323232;
+  padding: 15px;
+}
+
+.link-item {
+  display: flex;
+  align-items: top;
+}
+
+.link-title {
+  font-weight: 600;
+}
+
+.sub-profile {
+  display: grid;
+  grid-template-columns: 2.5fr 4fr;
+  margin-bottom: 5rem;
+}
+
+.address {
+  font-weight: 700;
+  font-size: 1rem;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+  position: relative;
+}
+.address::after {
+  content: "";
+  border-bottom: 2px solid #323232;
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+  width: 4.1rem;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-row-gap: 1.4rem;
+}
+.profile-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+.profile-title::after {
+  content: "";
+  border-top: 8px solid #eed217;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 11px;
+  left: -3px;
+  z-index: -1;
+}
+.profile-description {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.profile-picture {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.profile-picture img {
+  width: 5.4rem;
+  border-radius: 100%;
+  margin-right: 1.4rem;
+}
+
+.section-experience,
+.section-education {
+  display: grid;
+  grid-template-columns: 2.5fr 4fr;
+}
+
+.section-items {
+  margin-bottom: 5rem;
+}
+
+.section-item {
+  display: grid;
+  grid-template-columns: 1.9fr 5fr;
+  margin-bottom: 1.5rem;
+}
+.section-item:first-child .section-years-between {
+  position: relative;
+  padding-top: 2rem;
+}
+.section-item:first-child .section-years-between::before {
+  content: "";
+  border-bottom: 2px solid #323232;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.section-item:first-child .section-detail-title {
+  position: relative;
+  padding-top: 2rem;
+}
+.section-item:first-child .section-detail-title::before {
+  content: "";
+  border-bottom: 2px solid #eed217;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.section-item:last-child {
+  margin-bottom: 0rem;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  border-bottom: 2px solid #323232;
+  position: absolute;
+  top: 2.8rem;
+  left: 0;
+  width: 4.1rem;
+}
+
+.section-years-between {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.section-detail-title {
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=/js.00a46daa.css.map */
